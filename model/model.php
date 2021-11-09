@@ -16,12 +16,7 @@ class model extends config
         $run = $stmt->execute();
         $rs = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return  $rs;
-        // foreach ($rs as $v) {
-        //     echo  '<li class="list-group-item">'. $v['nome_tipo_contrato'] .'</li>';
-        // }
-        // while($row = $rs->fetch_array(MYSQLI_ASSOC)){
-        //     $array[] = $row;
-        // }
+        
     }
 
     public function add($nome_tipo_contrato, $cod_tipo_contrato, $meses, $valor, $valor_pos, $obs)
@@ -50,12 +45,4 @@ class model extends config
         }
     }
 
-
-    // public function update($novasenha, $id)
-    // {
-    //     $stmt = $this->pdo->prepare("UPDATE tipo_contrato SET senha = :novasenha WHERE id_tipo_contrato = :id");
-    //     $stmt->bindValue(":novasenha", sha1($novasenha));
-    //     $stmt->bindValue(":id", $id);
-    //     $run = $stmt->execute();
-    // }
 }
